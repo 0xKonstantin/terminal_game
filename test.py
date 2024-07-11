@@ -1,9 +1,12 @@
 import classes, random
 
 
-player = classes.Character(type='Player', name=input('What\'s your name: '), hp=10)
-enemy = classes.Character(type='Enemy', name='unknown', hp=random.randint(2,10))
+player = classes.Character(type='player', name='K', hp=10)
+enemy = classes.Character(type='Enemy', name='unknown', hp=10)
 
 
 
-print(enemy.hp)
+while(enemy.hp > 0):
+    player.deal_damage(enemy)
+
+    print(enemy.hp)
