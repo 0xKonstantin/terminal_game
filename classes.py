@@ -9,6 +9,7 @@ class Character:
             self.type = 'Player'
             self.in_battle = False
             self.deciding = False
+            self.target = 0
             self.in_battle = False
             self.playing = True
             self.choice_one = 0

@@ -6,7 +6,4 @@ enemy = classes.Character(type='Enemy', name='unknown', hp=10)
 
 
 
-while(enemy.hp > 0):
-    player.deal_damage(enemy)
-
-    print(enemy.hp)
+player.deal_damage(bear)
