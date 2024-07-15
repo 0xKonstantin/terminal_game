@@ -4,6 +4,7 @@ class Character:
     def __init__(self, type, name, hp):
         self.name = name
         self.hp = hp
+        self.level = 1
 
         if(type == "player"):
             self.type = 'Player'
@@ -15,6 +16,7 @@ class Character:
             self.choice_one = 0
             self.choice_two = 0
             self.choice_three = 0
+            self.action_selected = True
             
 
         else:
@@ -30,8 +32,8 @@ class Character:
             target.hp = 0  
         return damage
 
-    def heal(self, target):
-        healed = random.randint(1,3)
+    def heal(self, caster, target):
+        healed = caster.level * random.randint(2,4)
         target.hp += healed
         if(target.hp < 0):
             target.hp = 0

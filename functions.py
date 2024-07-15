@@ -1,3 +1,5 @@
+import random, classes, variables
+
 
 # Creates a space for text
 def space():
