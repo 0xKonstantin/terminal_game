@@ -17,6 +17,7 @@ class Character:
             self.choice_two = 0
             self.choice_three = 0
             self.action_selected = True
+            self.armed = True
             
 
         else:
