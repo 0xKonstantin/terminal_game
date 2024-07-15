@@ -23,7 +23,7 @@ class Character:
             self.turn = False
 
     def deal_damage(self, target):  
-        damage = random.randint(0,2)
+        damage = random.randint(0,3)
         target.hp -= damage
          
         if target.hp < 0:
