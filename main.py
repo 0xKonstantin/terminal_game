@@ -56,7 +56,7 @@ while(variables.playing):
             if(bear.turn):       
                 hit = bear.deal_damage(player)
                 print(f'The bear roars and smacks you with his Paw hitting you for {hit} damage.')
-                print(f'You have {player.hp} health reamining.')
+                print(f'You have {player.hp} health remaining.')
                 bear.turn = False
                 player.deciding = True
                 functions.section_divde()
@@ -149,7 +149,7 @@ while(variables.playing):
             if(racoon_1.turn):       
                 hit = racoon_1.deal_damage(player)
                 print(f'{racoon_1.name} lunges at you biting your ankle dealing {hit} damage.')
-                print(f'You have {player.hp} health reamining.')
+                print(f'You have {player.hp} health remaining.')
                 racoon_1.turn = False
                 functions.space()
 
@@ -157,7 +157,7 @@ while(variables.playing):
             if(racoon_2.turn):       
                 hit = racoon_2.deal_damage(player)
                 print(f'{racoon_2.name} scratches at your leg dealing {hit} damage.')
-                print(f'You have {player.hp} health reamining.')
+                print(f'You have {player.hp} health remaining.')
                 racoon_2.turn = False
                 functions.section_divde()
 
@@ -234,16 +234,16 @@ while(variables.playing):
             if(mike_tyson.turn and variables.round < 4):       
                 hit = mike_tyson.deal_damage(player)
                 print(f'{mike_tyson.name} throws a jab at you hitting you for {hit} damage.')
-                print(f'You have {player.hp} health reamining.')
+                print(f'You have {player.hp} health remaining.')
                 mike_tyson.turn = False
                 variables.round += 1
                 functions.section_divde()
-            else:
+            elif(mike_tyson.turn and variables.round == 4):
                 hit = 100000
                 player.hp -= hit
                 if(player.hp < 0):
                     player.hp = 0
                 print(f'Mike Tyson throws an overhand right connecting on your jaw dealing {hit} damage.')
-                print(f'You have {player.hp} health reamining.')
+                print(f'You have {player.hp} health remaining.')
         
 
